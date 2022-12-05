@@ -5,8 +5,12 @@ using namespace std;
 
 int main()
 {
-    SampleClass s; // SampleClassをインスタンス化
+    string s;
 
-    s.setNum(5);
-    cout << s.getNum() << endl;
+    s = "This is a";
+    s.append(" pen. "); //文字列の追加
+    cout << s << endl;
+    cout << "文字列の長さ：" << s.length() << endl;
+    printf("cher*:%s\n", s.c_str()); // char型に変換
+    return 0;
 }
