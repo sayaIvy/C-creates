@@ -3,17 +3,12 @@
 
 using namespace std;
 
-void SampleClass::func1()
+void SampleClass::setNum(int num)
 {
-    cout << "func1" << endl;
-    a = 1;
-    b = 1;
-    func2();
+    m_num = num;
 }
 
-void SampleClass::func2()
+int SampleClass::getNum()
 {
-    a = 2;
-    b = 2;
-    cout << "a = " << a << ", b = " << b << endl;
+    return m_num;
 }

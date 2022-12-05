@@ -7,16 +7,11 @@ class SampleClass
 public:
     // void set(int num); //実装：Sample::set(int num)
     // int get();         //実装：int Sample::get()
-    int a;
+    void setNum(int num);
+    int getNum();
 
 private:
-    int b;
-
-public:
-    void func1();
-
-private:
-    void func2();
+    int m_num;
 };
 
 #endif //_SAMPLE_H_
