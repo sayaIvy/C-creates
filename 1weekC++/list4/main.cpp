@@ -4,15 +4,11 @@
 using namespace std;
 int main()
 {
-    // new,deleteを使えばコンストラクタ、デストラクタの
-    //タイミングを任意にできる
-    Car *pC = 0;    //ポインタは０かNULL
-    pC = new Car(); //インスタンス生成
-    pC->supply(10); //燃料補給
-    pC->move();     //移動
-    pC->move();     //移動
-    delete pC;      //インスタンスの削除
-    cout << "インスタンスの消去完了" << endl;
+    int *p = 0;
+    p = new int(); // int型の領域を動的確保
+    *p = 123;
+    cout << *p << endl;
+    delete p; //動的に確保した領域を解放
     return 0;
 }
 // mallocやfreeはコンストラクタを呼び出せないから使わない
