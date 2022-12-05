@@ -5,10 +5,14 @@ using namespace std;
 int main()
 {
     int *p = 0;
-    p = new int(); // int型の領域を動的確保
-    *p = 123;
-    cout << *p << endl;
-    delete p; //動的に確保した領域を解放
+    int i;
+    p = new int[10]; // int型10個分の領域を動的確保
+    for (i = 0; i < 10; ++i)
+    {
+        p[i] = i;
+        cout << p[i] << endl;
+    }
+    delete[] p; //動的に確保した領域を解放
     return 0;
 }
-// mallocやfreeはコンストラクタを呼び出せないから使わない
+// newを配列を使って確保した場合、deleteも[]をつける
