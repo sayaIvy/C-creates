@@ -13,3 +13,11 @@ for ((i = 0; i < 16; i++)); do
     done
     echo "";
 done
+
+
+
+sleep 3
+printf '\e[2J';
+printf '\e[2K';
+printf '\e[1m\e[7m';
+echo "";
