@@ -176,14 +176,15 @@ int clearBlock(Cell block[BLOCK_SIZE][BLOCK_SIZE], int x, int y);
 
 int main(int argc, char *argv[])
 {
-    int y;
-    Cell a = {' ', WHITE, BLACK, REVERSE};
+    int i;
+    Cell block[BLOCK_SIZE][BLOCK_SIZE];
+    copyBlock(block_type[1], block);
     initialize();
-    for (y = 1; y < HEIGHT; y++)
+    for (i = 1; i < HEIGHT; i++)
     {
-        printCell(a, 5, y);
+        printBlock(block, 5, i);
         wait(500);
-        clearCell(a, 5, y);
+        clearBlock(block, 5, i);
     }
     reset();
 }
